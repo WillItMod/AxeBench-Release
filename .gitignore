@@ -1,0 +1,25 @@
+﻿# Release repo: keep binaries and local build outputs out of git
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Build artifacts
+*.exe
+*.bin
+*.zip
+*.tar.gz
+*.7z
+*.dmg
+*.AppImage
+
+# Node / Python
+node_modules/
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
