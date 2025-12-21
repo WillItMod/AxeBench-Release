@@ -6,6 +6,7 @@ Artifacts are published on the GitHub Release for this repo.
 
 - Windows: `AxeBench_v3.0_RC1e.exe`
 - Linux: `AxeBench_v3.0_RC1e_linux.bin`
+- Android client: `axebench_client_v1.2.apk`
 
 Verify downloads with:
 
