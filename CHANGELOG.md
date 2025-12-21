@@ -1,6 +1,8 @@
-﻿# Changelog
+# Changelog
 
-## v3.0.0 RC1e (beta)
+## v3.0.0-rc1e
 
-- RC1e documentation + checksums.
-- See `release-notes/RC1e.md`.
+- Publishes RC1e release documentation and SHA256 checksums.
+- Release binaries are distributed via GitHub Releases (not committed to the repo history).
+
+See `release-notes/RC1e.md`.
