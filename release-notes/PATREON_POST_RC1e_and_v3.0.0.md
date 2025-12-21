@@ -1,6 +1,6 @@
-# AxeBench RC1e (stable) + Android Client v1.2 + v3.0.0 (testing build)
+# AxeBench v3.0.0 (Stable) + Android Client v1.2
 
-Hey legends — RC1e is live and the Android client is updated to v1.2. I’ve also posted a v3.0.0 **testing build** for anyone who wants to help validate the last fixes before we call it “full release”.
+Hey legends — **AxeBench v3.0.0 is now STABLE** and the Android client is updated to v1.2. Thank you for all the testing, bugs, and feedback through the beta/RC cycle.
 
 ## Disclaimer (Please Read Before Blaming Anyone Else)
 
@@ -22,8 +22,8 @@ Tune responsibly. Or don't. But own it.
 
 Release repo (docs + checksums): `https://github.com/WillItMod/AxeBench-Release`
 
-- RC1e (stable): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0-rc1e`
-- v3.0.0 (testing build): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0`
+- RC1e (legacy RC): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0-rc1e`
+- v3.0.0 (stable): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0`
 
 Artifacts:
 
@@ -34,7 +34,7 @@ Artifacts:
 Checksums:
 
 - RC1e: `checksums/RC1e.sha256`
-- v3.0.0 testing: `checksums/v3.0.0-DRAFT.sha256`
+- v3.0.0 stable: `checksums/v3.0.0.sha256`
 
 ## Current known issues
 

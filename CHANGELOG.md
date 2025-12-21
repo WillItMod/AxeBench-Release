@@ -7,7 +7,8 @@
 
 See `release-notes/RC1e.md`.
 
-## v3.0.0 (draft)
+## v3.0.0
 
-- Windows and Linux artifacts built locally for testing.
-- Checksums staged in `checksums/v3.0.0-DRAFT.sha256`.
+- Stable v3.0.0 release artifacts for Windows/Linux/Android.
+
+See `release-notes/v3.0.0.md`.
