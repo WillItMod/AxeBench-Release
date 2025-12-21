@@ -20,10 +20,10 @@ Tune responsibly. Or don't. But own it.
 
 ## Downloads (GitHub Releases)
 
-Release repo (docs + checksums): `https://github.com/WillItMod/AxeBench-Release`
+Release repo (docs + checksums): <https://github.com/WillItMod/AxeBench-Release>
 
-- v3.0.0 (stable): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0`
-- RC1e (legacy RC): `https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0-rc1e`
+- v3.0.0 (stable): <https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0>
+- RC1e (legacy RC): <https://github.com/WillItMod/AxeBench-Release/releases/tag/v3.0.0-rc1e>
 
 Artifacts:
 
@@ -33,8 +33,8 @@ Artifacts:
 
 Checksums:
 
-- v3.0.0 stable: `checksums/v3.0.0.sha256`
-- RC1e: `checksums/RC1e.sha256`
+- v3.0.0 stable: [`checksums/v3.0.0.sha256`](../checksums/v3.0.0.sha256)
+- RC1e: [`checksums/RC1e.sha256`](../checksums/RC1e.sha256)
 
 ## Current known issues
 
