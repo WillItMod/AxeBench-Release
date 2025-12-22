@@ -16,6 +16,7 @@ Verify downloads with:
 
 - The Linux artifact is a single-file binary; ensure it is executable (`chmod +x`).
 - If a Linux build ever shows Python extension casing issues (e.g. `pandas/_libs/interval.so`), it typically indicates a build produced on a case-insensitive filesystem. Re-download and verify the checksum; if it persists, report the error output.
+- Android client `axebench_client_v1.2.apk`: verify it matches `checksums/RC1e.sha256` (older uploads may not).
 
 ## Security
 
