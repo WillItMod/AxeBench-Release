@@ -1,5 +1,7 @@
 # AxeBench v3.0.0 RC1e (beta) - Setup Guide
 
+Note: v3.0.1_ALPHA adds **Canaan Avalon Nano 3S** monitoring + pool scheduling support. See `release-notes/v3.0.1_ALPHA.md`.
+
 This guide covers running the RC1e release binaries (not building from source).
 
 ## Downloads

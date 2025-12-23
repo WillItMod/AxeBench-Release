@@ -17,6 +17,12 @@ Thumbs.db
 *.dmg
 *.AppImage
 
+# Allow curated release artifacts committed under artifacts/
+!artifacts/
+!artifacts/**/
+!artifacts/**/*.exe
+!artifacts/**/*.bin
+
 # Node / Python
 node_modules/
 .venv/

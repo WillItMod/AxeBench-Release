@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.0.1_ALPHA
+
+- Adds **Canaan Avalon Nano 3S** monitoring + pool scheduling support.
+- Improves pool scheduler reliability (pool selection + activation).
+- Publishes Windows/Linux alpha artifacts and SHA256 checksums.
+
+See `release-notes/v3.0.1_ALPHA.md`.
+
 ## v3.0.0-rc1e
 
 - Publishes RC1e release documentation and SHA256 checksums.

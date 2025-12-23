@@ -1,5 +1,11 @@
 # AxeBench v3.0.0 RC1e (beta) - Troubleshooting
 
+## Nano 3S (v3.0.1_ALPHA)
+
+- Pool URLs must include the full prefix: `stratum+tcp://host:port`.
+- Nano 3S is monitored + pool-managed only in AxeBench (no voltage/frequency tuning without custom firmware).
+- If pool changes appear to save but not activate, ensure the device is rebooted; v3.0.1_ALPHA triggers the correct reboot action during scheduled changes.
+
 ## UI doesn’t load / “Unable to connect”
 
 1. Make sure AxeBench is running.
