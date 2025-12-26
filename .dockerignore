@@ -4,8 +4,8 @@ docs
 release-notes
 checksums
 artifacts/*
+!artifacts/*/
 !artifacts/*/*linux.bin
 README.md
 CHANGELOG.md
 LICENSE
-
