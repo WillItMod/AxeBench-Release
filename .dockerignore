@@ -1,0 +1,11 @@
+.git
+.github
+docs
+release-notes
+checksums
+artifacts/*
+!artifacts/*/*linux.bin
+README.md
+CHANGELOG.md
+LICENSE
+
