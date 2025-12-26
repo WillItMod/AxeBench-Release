@@ -33,9 +33,22 @@ jobs:
         run: |
           set -euo pipefail
           tag="${GITHUB_REF_NAME#v}"
-          mapped="$(echo "$tag" | sed -E 's/-beta([0-9]+)/_BETA_\\1/i; s/-alpha([0-9]+)/_ALPHA_\\1/i' | tr '[:lower:]' '[:upper:]')"
+          lower="${tag,,}"
+          if [[ "$lower" =~ ^(.*)-beta([0-9]+)$ ]]; then
+            mapped="${BASH_REMATCH[1]}_BETA_${BASH_REMATCH[2]}"
+          elif [[ "$lower" =~ ^(.*)-alpha([0-9]+)$ ]]; then
+            mapped="${BASH_REMATCH[1]}_ALPHA_${BASH_REMATCH[2]}"
+          elif [[ "$lower" =~ ^(.*)-beta$ ]]; then
+            mapped="${BASH_REMATCH[1]}_BETA"
+          elif [[ "$lower" =~ ^(.*)-alpha$ ]]; then
+            mapped="${BASH_REMATCH[1]}_ALPHA"
+          else
+            mapped="$tag"
+          fi
           bin="artifacts/v${mapped}/AxeBench_v${mapped}_linux.bin"
           echo "bin=$bin" >> "$GITHUB_OUTPUT"
+          ls -la artifacts | head -n 100
+          ls -la "artifacts/v${mapped}" | head -n 50 || true
           test -f "$bin"
 
       - name: Build and push (amd64)
@@ -50,4 +63,3 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/axebench-release:${{ github.ref_name }}
             ghcr.io/${{ github.repository_owner }}/axebench-release:latest
-
