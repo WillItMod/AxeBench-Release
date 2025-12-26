@@ -61,5 +61,5 @@ jobs:
           build-args: |
             BIN_PATH=${{ steps.bin.outputs.bin }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/axebench-release:${{ github.ref_name }}
-            ghcr.io/${{ github.repository_owner }}/axebench-release:latest
+            ghcr.io/willitmod/axebench-release:${{ github.ref_name }}
+            ghcr.io/willitmod/axebench-release:latest
