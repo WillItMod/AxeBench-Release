@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.2
+
+- Hosted-only licensing (no local licensing server bundled).
+- Publishes Windows/Linux artifacts and SHA256 checksums.
+
 ## v3.0.1_ALPHA
 
 - Adds **Canaan Avalon Nano 3S** monitoring + pool scheduling support.

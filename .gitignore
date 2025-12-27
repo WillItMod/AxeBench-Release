@@ -23,6 +23,11 @@ Thumbs.db
 !artifacts/**/*.exe
 !artifacts/**/*.bin
 
+# Allow curated Windows artifacts committed under windows/
+!windows/
+!windows/**/
+!windows/**/*.exe
+
 # Node / Python
 node_modules/
 .venv/

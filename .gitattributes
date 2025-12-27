@@ -1,0 +1,2 @@
+artifacts/**/*.bin filter=lfs diff=lfs merge=lfs -text
+windows/**/*.exe filter=lfs diff=lfs merge=lfs -text

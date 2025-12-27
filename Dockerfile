@@ -11,10 +11,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-ARG BIN_PATH=artifacts/v3.0.1_ALPHA/AxeBench_v3.0.1_ALPHA_linux.bin
+ARG BIN_PATH=artifacts/v3.0.2/AxeBench_v3.0.2_linux.bin
 COPY ${BIN_PATH} /app/axebench.bin
 RUN chmod +x /app/axebench.bin && chown -R 1000:1000 /app
 
 EXPOSE 5000
 USER 1000:1000
-CMD ["/app/axebench.bin"]
+CMD ["/app/axebench.bin","--replace-instance"]
