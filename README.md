@@ -11,9 +11,11 @@ Release-facing documentation, artifacts, and checksums for AxeBench.
 Direct downloads (latest):
 - Windows: https://github.com/WillItMod/AxeBench-Release/raw/main/windows/AxeBench_v3.0.2.exe
 - Linux: https://github.com/WillItMod/AxeBench-Release/raw/main/artifacts/v3.0.2/AxeBench_v3.0.2_linux.bin
+- Android client (APK): https://github.com/WillItMod/AxeBench-Release/raw/main/android/AxeBench_Client_v1.2.apk
 
 Checksums:
 - https://github.com/WillItMod/AxeBench-Release/blob/main/checksums/v3.0.2.sha256
+- https://github.com/WillItMod/AxeBench-Release/blob/main/checksums/android-client.sha256
 
 ## Licensing / Patreon
 - AxeBench uses the hosted licensing server (no local licensing server is included).
