@@ -19,6 +19,9 @@ jobs:
         with:
           lfs: true
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -35,7 +38,8 @@ jobs:
         run: |
           set -euo pipefail
           tag="${GITHUB_REF_NAME#v}"
-          lower="${tag,,}"
+          base="${tag%%-r*}"
+          lower="${base,,}"
           if [[ "$lower" =~ ^(.*)-beta([0-9]+)$ ]]; then
             mapped="${BASH_REMATCH[1]}_BETA_${BASH_REMATCH[2]}"
           elif [[ "$lower" =~ ^(.*)-alpha([0-9]+)$ ]]; then
@@ -45,23 +49,27 @@ jobs:
           elif [[ "$lower" =~ ^(.*)-alpha$ ]]; then
             mapped="${BASH_REMATCH[1]}_ALPHA"
           else
-            mapped="$tag"
+            mapped="$base"
           fi
-          bin="artifacts/v${mapped}/AxeBench_v${mapped}_linux.bin"
-          echo "bin=$bin" >> "$GITHUB_OUTPUT"
+          bin_amd64="artifacts/v${mapped}/AxeBench_v${mapped}_linux.bin"
+          bin_arm64="artifacts/v${mapped}/AxeBench_v${mapped}_linux_arm64.bin"
+          echo "mapped=$mapped" >> "$GITHUB_OUTPUT"
+          echo "bin_amd64=$bin_amd64" >> "$GITHUB_OUTPUT"
+          echo "bin_arm64=$bin_arm64" >> "$GITHUB_OUTPUT"
           ls -la artifacts | head -n 100
           ls -la "artifacts/v${mapped}" | head -n 50 || true
-          test -f "$bin"
+          test -f "$bin_amd64"
+          test -f "$bin_arm64"
 
-      - name: Build and push (amd64)
+      - name: Build and push (multi-arch)
         uses: docker/build-push-action@v6
         with:
           context: .
           file: Dockerfile
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           build-args: |
-            BIN_PATH=${{ steps.bin.outputs.bin }}
+            AXEBENCH_TAG=${{ steps.bin.outputs.mapped }}
           tags: |
             ghcr.io/willitmod/axebench-release:${{ github.ref_name }}
             ghcr.io/willitmod/axebench-release:latest

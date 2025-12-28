@@ -11,9 +11,19 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-ARG BIN_PATH=artifacts/v3.0.2/AxeBench_v3.0.2_linux.bin
-COPY ${BIN_PATH} /app/axebench.bin
-RUN chmod +x /app/axebench.bin && chown -R 1000:1000 /app
+ARG AXEBENCH_TAG=3.0.2
+ARG TARGETARCH
+COPY artifacts/v${AXEBENCH_TAG}/ /tmp/artifacts/
+RUN set -euo pipefail; \
+  case "${TARGETARCH}" in \
+    amd64) src="/tmp/artifacts/AxeBench_v${AXEBENCH_TAG}_linux.bin" ;; \
+    arm64) src="/tmp/artifacts/AxeBench_v${AXEBENCH_TAG}_linux_arm64.bin" ;; \
+    *) echo "Unsupported TARGETARCH: ${TARGETARCH}" >&2; exit 1 ;; \
+  esac; \
+  test -f "${src}"; \
+  cp "${src}" /app/axebench.bin; \
+  chmod +x /app/axebench.bin; \
+  chown -R 1000:1000 /app
 
 EXPOSE 5000
 USER 1000:1000
