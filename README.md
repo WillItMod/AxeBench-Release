@@ -14,6 +14,10 @@ Direct downloads (latest):
 - Linux (arm64): https://github.com/WillItMod/AxeBench-Release/raw/main/artifacts/v3.0.2/AxeBench_v3.0.2_linux_arm64.bin
 - Android client (APK): https://github.com/WillItMod/AxeBench-Release/raw/main/android/AxeBench_Client_v1.2.apk
 
+Notes:
+- Windows: if the UI window doesn't open, browse to `http://127.0.0.1:5000` (or your `AXE_PORT`).
+- Linux: downloaded `.bin` files usually need `chmod +x` before running.
+
 Checksums:
 - https://github.com/WillItMod/AxeBench-Release/blob/main/checksums/v3.0.2.sha256
 - https://github.com/WillItMod/AxeBench-Release/blob/main/checksums/android-client.sha256
