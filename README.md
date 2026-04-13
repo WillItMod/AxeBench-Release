@@ -1,5 +1,17 @@
 # AxeBench-Release
 
+## License (READ THIS FIRST)
+
+This repository is source-available under the **Business Source License 1.1
+(BSL 1.1)**. It is **NOT** an open source repository.
+
+- No resale / no redistributed packages or release bundles without a commercial
+  license: [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md)
+- No public forks, mirrors, or derivative redistributions without explicit
+  written permission: [NO_FORK_POLICY.md](NO_FORK_POLICY.md)
+- License: [LICENSE](LICENSE)
+- Branding: [TRADEMARK.md](TRADEMARK.md)
+
 Release-facing documentation, artifacts, and checksums for AxeBench.
 
 ## NEW: Hosted Licensing + Nano 3S Support (v3.0.2)
@@ -35,4 +47,5 @@ Checksums:
 
 ## License
 
-See `LICENSE`.
+See [LICENSE](LICENSE), [LICENSE_POLICY.md](LICENSE_POLICY.md), and
+[NO_FORK_POLICY.md](NO_FORK_POLICY.md).
